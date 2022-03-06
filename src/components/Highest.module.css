@@ -1,0 +1,21 @@
+.description {
+background-color: bisque;
+margin-top: 2rem;
+
+
+}
+
+.boxes {
+    margin-top: 5rem;
+ display: flex;
+ 
+justify-content: space-around;
+
+}
+
+.box {
+    background-color: beige;
+   height: 15rem;
+   width: 30rem;
+
+}
