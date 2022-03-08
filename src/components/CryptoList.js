@@ -1,9 +1,13 @@
+import CryptoItem from './CryptoItem';
+
+
 import classes from './CryptoList.module.css';
 
 
 function CryptoList () {
 
     return (
+        <div>
         <ul className={classes.list}>
             <li>1</li>
             <li>2</li>
@@ -26,6 +30,9 @@ function CryptoList () {
 
 
         </ul>
+
+        <CryptoItem />
+        </div>
     );
 }
 
