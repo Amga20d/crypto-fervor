@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Data from "./Data";
+
 
 import classes from './CryptoItem.module.css'
 
@@ -12,12 +12,12 @@ function CryptoItem() {
 
 
   useEffect(() => {
-    fetch("https://api.coincap.io/v2/assets")
+    fetch("//localhost:5000/home")
       .then((res) => res.json())
       .then(
         (result) => {
           //   setIsLoaded(true);
-          setItems(result.data);
+          setItems(result);
         }
         
         // Note: it's important to handle errors here
@@ -30,6 +30,7 @@ function CryptoItem() {
       );
   }, []);
   
+  
 
   return (
     <div className={classes.table} >
@@ -38,6 +39,8 @@ function CryptoItem() {
         <th className={classes.th}>Name and Symbol</th>
         <th className={classes.th}>Price</th>
         <th className={classes.th}>Market Capital Usd</th>
+        <th className={classes.th}>Previous Count</th>
+        <th className={classes.th}>Current Count</th>
         <th className={classes.th}>Fervor</th>
       </tr>
       {items.map((item) => (
@@ -46,7 +49,9 @@ function CryptoItem() {
           <td className={classes.td}>{`${item.name} ${item.symbol}`}</td>
           <td className={classes.td}>{item.priceUsd} </td>
           <td className={classes.td}>{item.marketCapUsd}</td>
-          <td className={classes.td}>{Data.find((el) => el.id === item.id)?.fervor || "not found"}</td>
+          <td className={classes.td}>{item.prevCount}</td>
+          <td className={classes.td}>{item.currCount}</td>
+          <td className={classes.td}>{item.fervorChange || 'Not found'} % </td>
         </tr>
       ))}
     </div>
