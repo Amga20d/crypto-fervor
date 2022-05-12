@@ -6,29 +6,30 @@ import classes from './CryptoItem.module.css'
 
 
 
-function CryptoItem() {
-  const [items, setItems] = useState([]);
+function CryptoItem(props) {
+  // const [items, setItems] = useState([]);
  
 
 
-  useEffect(() => {
-    fetch("//localhost:5000/home")
-      .then((res) => res.json())
-      .then(
-        (result) => {
-          //   setIsLoaded(true);
-          setItems(result);
-        }
+  // useEffect(() => {
+  //   fetch("//localhost:5000/home")
+  //     .then((res) => res.json())
+  //     .then(
+  //       (result) => {
+  //         //   setIsLoaded(true);
+  //         setItems(result);
+  //       }
         
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
-        // (error) => {
-        //   setIsLoaded(true);
-        //   setError(error);
-        // }
-      );
-  }, []);
+  //       // Note: it's important to handle errors here
+  //       // instead of a catch() block so that we don't swallow
+  //       // exceptions from actual bugs in components.
+  //       // (error) => {
+  //       //   setIsLoaded(true);
+  //       //   setError(error);
+  //       // }
+  //     );
+  // }, []);
+  const items = props.list;
   
   
 

@@ -4,12 +4,12 @@ import CryptoItem from './CryptoItem';
 import classes from './CryptoList.module.css';
 
 
-function CryptoList () {
+function CryptoList (props) {
 
     return (
         <div>
         
-        <CryptoItem />
+        <CryptoItem list ={props.list} />
         </div>
     );
 }
