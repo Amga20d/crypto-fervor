@@ -25,12 +25,12 @@ function App() {
         // }
       );
   }, []);
-
+ const content = items;
   return (
     <div className="App">
      <NavBar />
-     <Highest list ={items} />
-     <CryptoList list ={items}/>
+     <Highest list ={content} />
+     <CryptoList list ={content}/>
 
     </div>
   );
