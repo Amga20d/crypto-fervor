@@ -11,35 +11,37 @@ function Highest(props) {
     
     <div>
 
-        <h2 className={classes.description} > Today's Cryptocurrency by general enthusiasm</h2>
+        <h2 className={classes.description} > Today's Cryptocurrency by General Enthusiasm</h2>
       <div className={classes.boxes}>
         
          <div className={classes.box}>
          <h2 className={classes.title} >Highest Sentiment Today</h2>
-         <tabel className={classes.header}>
+         <div className={classes.table}>
            <tr >
              <th>Name</th>
              <th>Fervor</th>
            </tr>
            {highest.map((high) =>
            <tr>
-             <td>{high.name}</td>
+             <td className={classes.name}>{high.name}</td>
              <td>{high.fervorChange} %</td>
            </tr>)}
-           </tabel>
+           </div>
          </div>
         
         <div className={classes.box}>
         <h2 className={classes.title} >Lowest Sentiment Today</h2>
+        <div className={classes.table}>
            <tr>
              <th>Name</th>
              <th>Fervor</th>
            </tr>
            {Lowest.map((low) =>
            <tr>
-             <td>{low.name}</td>
+             <td className={classes.name}>{low.name}</td>
              <td>{low.fervorChange} %</td>
            </tr>)}
+           </div>
          </div>
       </div>
      

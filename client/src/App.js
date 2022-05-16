@@ -3,7 +3,7 @@ import NavBar from './components/NavBar';
 import Highest from './components/Highest';
 import CryptoList from './components/CryptoList';
 
-import './App.css';
+import classes from './App.module.css'
 
 function App() {
   const [items, setItems] = useState([]);
@@ -29,9 +29,10 @@ function App() {
   return (
     <div className="App">
      <NavBar />
-     <Highest list ={content} />
+     <section className={classes.Sec}>
+       <Highest list ={content} />
      <CryptoList list ={content}/>
-
+     </section>
     </div>
   );
 }
