@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import NavBar from './components/NavBar';
 import Highest from './components/Highest';
 import CryptoList from './components/CryptoList';
+import Footer from "./components/Footer";
 
 import classes from './App.module.css'
 
@@ -33,6 +34,7 @@ function App() {
        <Highest list ={content} />
      <CryptoList list ={content}/>
      </section>
+     <Footer />
     </div>
   );
 }
