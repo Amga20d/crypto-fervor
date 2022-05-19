@@ -52,7 +52,7 @@ function CryptoItem(props) {
           <td className={classes.td}>{item.marketCapUsd}</td>
           <td className={classes.td}>{item.prevCount}</td>
           <td className={classes.td}>{item.currCount}</td>
-          <td className={classes.td}>{item.fervorChange || 'Not found'} % </td>
+          <td className={classes.td}>{item.fervorChange} </td>
         </tr>
       ))}
     </div>

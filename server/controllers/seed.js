@@ -19,8 +19,7 @@ mongoose
     console.log(err);
   });
 
-
- //to seed the data 
+ 
  axios.get(process.env.COIN_API).then((res) => {
    const seed = res.data.data;
  

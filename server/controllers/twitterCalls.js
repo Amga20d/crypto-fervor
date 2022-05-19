@@ -23,7 +23,7 @@ mongoose
       return new Promise(resolve => setTimeout(resolve, mili))
     };
     
-    //doing twitter calls by looping through db 
+    
 
 function twitterCalls() {Currency.find({}).then((datas) =>{
   async function asyncCall() {

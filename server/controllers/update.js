@@ -52,7 +52,6 @@ mongoose
 });;
   };
 
-  //to update the data //
 
 
 
