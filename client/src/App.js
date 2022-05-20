@@ -9,7 +9,7 @@ import classes from './App.module.css'
 function App() {
   const [items, setItems] = useState([]);
   useEffect(() => {
-    fetch("//localhost:5000/home")
+    fetch("https://mighty-cliffs-73053.herokuapp.com/home")
       .then((res) => res.json())
       .then(
         (result) => {
